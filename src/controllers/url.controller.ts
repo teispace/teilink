@@ -8,7 +8,7 @@ const urlModel = new UrlModel();
 class UrlController {
   public async createUrl(req: Request, res: Response) {
     try {
-      const { url } = req.body;
+      let { url } = req.body;
 
       if (!url || !isUrlValid(url)) {
         return res.render("index", {
@@ -17,6 +17,13 @@ class UrlController {
             text: "Invalid URL",
           },
         });
+      }
+
+      // add http:// to the URL if it doesn't have it
+      const hasProtocol = url.match(/^https?:\/\//);
+
+      if (!hasProtocol) {
+        url = `http://${url}`;
       }
 
       let shortURLCode;
