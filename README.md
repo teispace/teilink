@@ -11,6 +11,7 @@ This is a URL shortener application that allows users to create short links for 
 - [Code Structure](#code-structure)
 - [Contributing](#contributing)
 - [License](#license)
+- [Screenshots](#screenshots)
 
 ## Features
 
@@ -101,3 +102,13 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Screenshots
+<img width="450" alt="Screenshot 2024-11-04 at 10 53 49 PM" src="https://github.com/user-attachments/assets/ff36cf68-c032-4e92-a291-52c3bb84523a">
+<img width="450" alt="Screenshot 2024-11-04 at 10 54 00 PM" src="https://github.com/user-attachments/assets/aeef879b-b3e6-4841-9dcc-265c957d2ffc">
+<img width="450" alt="Screenshot 2024-11-04 at 10 54 09 PM" src="https://github.com/user-attachments/assets/e22ea134-fd2f-4000-9dea-12e8c5767254">
+
+
+
+
