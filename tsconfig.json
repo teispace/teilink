@@ -1,21 +1,15 @@
 {
   "compilerOptions": {
- 
     "target": "ES2020",
     "module": "CommonJS",
-    "moduleResolution": "node" ,
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@/": ["src/"],
       "@/*": ["src/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ],
-    "types": [
-      "node",
-    ],
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "types": ["node"],
     "resolveJsonModule": true,
     "allowJs": true,
     "outDir": "./build",

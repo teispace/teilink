@@ -1,0 +1,57 @@
+echo '🏗️👷 Styling, testing and building your project before committing'
+
+# Npm install
+echo '🧹 Installing dependencies'
+npm install
+if [ $? -eq 0 ]; then
+    echo '✅ Dependencies installed'
+else
+    echo '❌ Dependencies installation failed. Fix the errors.'
+    exit 1
+fi
+
+# Check ESLint Standards
+echo '🧹 Checking ESLint Standards'
+npm run lint
+if [ $? -ne 0 ]; then
+    echo '❌ ESLint Standards not met. Fix the errors.'
+    exit 1
+else
+    echo '✅ ESLint Standards met'
+fi
+
+
+# Check Prettier Standards
+echo '🧹 Checking Prettier Standards'
+npm run format:check
+if [ $? -ne 0 ]; then
+    echo '❌ Prettier Standards not met. Run "npm run format" to fix it.'
+    exit 1
+else
+    echo '✅ Prettier Standards met'
+fi
+
+
+
+# Check TypeScript Standards
+echo '🧹 Checking TypeScript Standards'
+npm run check-types
+if [ $? -ne 0 ]; then
+    echo '❌ TypeScript Standards not met. Fix the errors.'
+    exit 1
+else
+    echo '✅ TypeScript Standards met'
+fi
+
+
+# Build the project
+echo '🧹 Building the project'
+npm run build
+if [ $? -eq 0 ]; then
+    echo '✅ Build successful'
+else
+    echo '❌ Build failed. Fix the errors.'
+    exit 1
+fi
+
+echo '✅ Styling, testing and building your project before committing is successful'
