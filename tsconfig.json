@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+ 
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node" ,
+    "baseUrl": ".",
+    "paths": {
+      "@/": ["src/"],
+      "@/*": ["src/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "types": [
+      "node",
+    ],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": "./build",
+    "noEmit": false,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+
+    "skipLibCheck": true
+  },
+  "include": [
+    "*",
+    "src/app.ts",
+    "src/server.ts",
+    "src/**/*.ts",
+    "src/**/*.json",
+    ".env"
+  ],
+  "exclude": ["node_modules", "./build", "src/http", "src/logs", "__tests__"]
+}

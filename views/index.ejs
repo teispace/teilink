@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <%- include('partials/head') %>
+  <body>
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <div class="oceanb">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <div class="container">
+      <div class="shortner-card">
+        <h1 class="text-center">Tei Url Shortner</h1>
+        <form action="/" method="post">
+          <div class="form-group">
+            <label for="url">Enter your URL</label>
+            <input
+              type="text"
+              class="form-control"
+              id="url"
+              name="url"
+              placeholder="Enter your URL"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Shorten</button>
+        </form>
+        <% if (typeof message !== 'undefined' && message.text) { %>
+            <div id="message" class="message <%= message.type %>">
+                <%= message.text %>
+            </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
