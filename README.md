@@ -30,6 +30,9 @@ This is a URL shortener application that allows users to create short links for 
 
 ## Installation
 
+**NOTE:** Redis and MySQL need to be installed first. Refer to the official [Redis documentation](https://redis.io/docs/getting-started/installation/) for installation instructions.
+
+
 1. Clone the repository:
 
    ```bash
